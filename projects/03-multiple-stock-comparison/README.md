@@ -1,29 +1,70 @@
 # Multiple Stock Comparison
 
-This project compares the historical performance and risk of Apple (AAPL), Microsoft (MSFT), Alphabet (GOOGL), and the S&P 500 ETF (SPY).
+## Project Overview
 
-## Analysis
+This project compares the historical performance of multiple stocks and a market benchmark using Python.
 
-- Downloads daily closing prices from Yahoo Finance for 2020-01-01 through 2025-01-01.
-- Calculates daily and cumulative returns.
-- Compares normalized price performance and daily return distributions.
-- Measures correlations between each asset's daily returns.
-- Reports annualized return, annualized volatility, and Sharpe ratio.
+## Assets Analaysed
 
-## Generated Figures
+- AAPL
+- MSFT
+- GOOGL
+- SPY
 
-- `normalized_prices.png`: normalized price growth from a common starting value.
-- `cumulative_returns.png`: growth of an initial $1 investment.
-- `daily_returns_distribution.png`: distribution of daily returns for each asset.
-- `correlation_matrix.png`: correlation between daily returns.
-- `risk_return_scatter.png`: annualized risk-return comparison.
+## Tools Used
 
-## Run
+- Python
+- pandas
+- NumPy
+- matplotlib
+- yfinance
 
-From the repository root, install the dependencies and run:
+## Key Concepts
 
-```bash
-python projects/03-multiple-stock-comparison/multiple_stock-comparison.py
-```
+### Normalised Price
 
-The script prints summary statistics and saves the figures in the `figures/` directory. An internet connection is required to download the market data.
+Normalised prices allow different assets to be compared from the same starting point.
+
+### Daily Return
+
+The percentage change in price from one trading day to the next.
+
+### Cumulative Return
+
+Cumulative return shows how the value of an initial investment changes over time.
+
+### Correlation
+
+Correlation measures how similarly different assets move.
+
+## Results
+
+### Normalized Prices
+
+![Normalized Prices](figures/normalized_prices.png)
+
+### Cumulative Returns
+
+![Cumulative Returns](figures/cumulative_returns.png)
+
+### Daily Returns Distribution
+
+![Daily Returns Distribution](figures/daily_returns_distribution.png)
+
+### Correlation Matrix
+
+![Correlation Matrix](figures/correlation_matrix.png)
+
+### Risk-Return Scatter
+
+![Risk Return Scatter](figures/risk_return_scatter.png)
+
+## What I Learned
+
+- How to use pandas DataFrames with multiple columns
+
+## Limitations
+
+- It does not predict future returns
+- It ignores dividendsl, transaction costs, and taxes
+- Sharpe ratio is calculated using a simplified risk-free rate of 0
